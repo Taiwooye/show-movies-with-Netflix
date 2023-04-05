@@ -31,7 +31,10 @@ let movies = [];
 
 console.log(window.location.href);
 
-if (window.location.href == "http://127.0.0.1:5500/show.html") {
+window.location.href == "http://127.0.0.1:5500/show.html" ||
+  "https://show-movies-with-netflix.vercel.app/show.html";
+
+if (window.location.href) {
   load();
 }
 
