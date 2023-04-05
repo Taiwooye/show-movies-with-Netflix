@@ -46,6 +46,7 @@ async function videDetails(id) {
       return response.json();
     })
     .then((data) => {
+      console.log(data);
       return data.results.filter(
         (item) => item.type == "Trailer" && item.name == "Official Trailer"
       );
@@ -62,9 +63,8 @@ function load() {
       return response.json();
     })
     .then((data) => {
+      console.log(data);
       watchmovie(data.results);
-
-      console.log(data.results);
     });
 }
 
