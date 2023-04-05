@@ -245,8 +245,7 @@ justify-content: space-between;
   ul li{
     display: block;
     width: 100%;
-    font-size: 15px;
-    margin-right:10px
+    padding: 0;
   }
 #image{
   width: 100%;
