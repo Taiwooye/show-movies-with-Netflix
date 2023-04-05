@@ -5,7 +5,7 @@ const myModal = new bootstrap.Modal(document.getElementById("exampleModal"));
 // myModal.show();
 
 function next() {
-  if (email.value == "Oyedokuntaiwo96@gmail.com") {
+  if (email.value != "") {
     // display.innerHTML = 'welcome to login page'
     window.open("show.html", "_self");
 
@@ -119,12 +119,6 @@ function watchmovie(movies) {
       let moveImg = document.querySelectorAll(".movie-img");
 
       moveImg[j].onclick = async function () {
-        // console.log("Image clicked");
-
-        // document.getElementById("image").innerHTML = img;
-        // document.getElementById("titles").innerHTML = title;
-        // myModal.show();
-
         await Showdetails(title, img, overview, mvId);
       };
 
@@ -133,9 +127,9 @@ function watchmovie(movies) {
   }
 }
 
+//show videos in modal box
 async function Showdetails(title, img, overview, id) {
-  //moviecontent.innerHTML = "";
-
+  
   let path = "https://image.tmdb.org/t/p/original";
   let youtube_path = "https://www.youtube.com/embed/";
 
@@ -146,21 +140,14 @@ async function Showdetails(title, img, overview, id) {
 
     console.log(data);
   });
-
-  //console.log(watch);
-
   document.getElementById("titles").innerHTML = title.substr(0, 18);
   document.getElementById("overview").innerHTML = overview;
   myModal.show();
 }
 
-//https://www.youtube.com/embed/d9MyW72ELq0
-//seeVideo();
-
 async function seeVideo() {
   let watch = await videDetails(76600).then((data) => console.log(data));
 
-  //return console.log(watch);
 }
 
 var stopVideo = function () {
@@ -174,10 +161,8 @@ var stopVideo = function () {
     video.pause();
   }
 };
+//stop the video from playing 
 let close = document.querySelector(".btn-close");
 close.addEventListener("click", function () {
-  //console.log("close");
-  //stopVideo;
-
   document.getElementById("iframe").src = "";
 });
