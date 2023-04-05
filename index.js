@@ -4,8 +4,17 @@ let display = document.getElementById("show");
 const myModal = new bootstrap.Modal(document.getElementById("exampleModal"));
 // myModal.show();
 
+
+
+// String with email address
+//const str = "johndoe@example.com";
+
+//regexExp.test(str); // true
+
 function next() {
-  if (email.value != "") {
+  const regexExp =
+  /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/gi;
+  if (regexExp.test(email.value)) {
     // display.innerHTML = 'welcome to login page'
     window.open("show.html", "_self");
 
@@ -64,7 +73,6 @@ function load() {
 let moviecontent = document.querySelector(".moviecontent");
 
 function watchmovie(movies) {
-
   let j = 0;
   for (let i = 0; i < movies.length; i++) {
     let content = document.createElement("div");
@@ -129,7 +137,6 @@ function watchmovie(movies) {
 
 //show videos in modal box
 async function Showdetails(title, img, overview, id) {
-  
   let path = "https://image.tmdb.org/t/p/original";
   let youtube_path = "https://www.youtube.com/embed/";
 
@@ -147,7 +154,6 @@ async function Showdetails(title, img, overview, id) {
 
 async function seeVideo() {
   let watch = await videDetails(76600).then((data) => console.log(data));
-
 }
 
 var stopVideo = function () {
@@ -161,7 +167,7 @@ var stopVideo = function () {
     video.pause();
   }
 };
-//stop the video from playing 
+//stop the video from playing
 let close = document.querySelector(".btn-close");
 close.addEventListener("click", function () {
   document.getElementById("iframe").src = "";
