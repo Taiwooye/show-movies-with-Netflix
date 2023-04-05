@@ -4,8 +4,6 @@ let display = document.getElementById("show");
 const myModal = new bootstrap.Modal(document.getElementById("exampleModal"));
 // myModal.show();
 
-
-
 // String with email address
 //const str = "johndoe@example.com";
 
@@ -13,7 +11,7 @@ const myModal = new bootstrap.Modal(document.getElementById("exampleModal"));
 
 function next() {
   const regexExp =
-  /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/gi;
+    /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/gi;
   if (regexExp.test(email.value)) {
     // display.innerHTML = 'welcome to login page'
     window.open("show.html", "_self");
@@ -66,7 +64,7 @@ function load() {
     .then((data) => {
       watchmovie(data.results);
 
-      // console.log(data.results);
+      console.log(data.results);
     });
 }
 
