@@ -86,7 +86,7 @@ function watchmovie(movies) {
         <img src="${path}${img}" class="movie-img">
       </div>
       <h2 class="movie-title">${title.substr(0, 18)}</h2>
-    <div class+"like_contain">  <span class="movie-price">${date} </span>
+    <div class="like_contain">  <span class="movie-price">${date} </span>
     <i class="fa-regular fa-heart like" ></i></div>
     
     </div>`;
