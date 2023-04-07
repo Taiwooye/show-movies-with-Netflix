@@ -14,29 +14,65 @@
  <header>
     <div class="divb"> 
         <label class="jj" for="">NETFLIX</label>
-      <button class="jh"><a href="">Get Started</a></button></div>
-        <div>
-            <h2 style="font-size: 52px;">Unlimited movies, <br>TV shows, and more.</h2>
-            <h4 style="font-size: 28px; ">Watch anywhere. Cancel anytime</h4>
-            <p style="font-size: 21.2px;">Ready to watch? Enter your email to create or restart your membership.</p>
+      <button class="jh"><a href="">Sign-In</a></button></div>
+
+        <div class="email-form-container">
+                <h2 >Unlimited movies, <br>TV shows, and more.</h2>
+                <h4 >Watch anywhere. Cancel anytime</h4>
+                <p >Ready to watch? Enter your email to create or restart your membership.</p>
+
+            <div style="display: flex;justify-content: center;" >
+               <input type="email" class="jpj" id="email" value="" placeholder="Email address" required>
+               <br>
+               <button type ="submit" class="butt" onclick="next()">Get Started>></button>
+            </div>
+            <span id="pop"></span>
+           
+            <br>
+            <br>
         </div>
-        <div style="display: flex;justify-content: center;gap: 5px;flex-wrap: wrap;" >
-           <input type="email" class="jpj" id="email" value="" placeholder="Email address" required>
-           <button type ="submit" class="butt" onclick="next()">Sign-In>>></button>
-        </div>
-        <span id="pop"></span>
-       
-        <br>
-        <br>
-        <br>
-        <h2 style="font-size: 38px;">Enjoy on your TV.</h2>
-        <h4  style="font-size: 26px; margin: 5px;">Watch on smart TVs,Playstation, <br> Xbox,Chromecast, Apple TV, Blu-ray payers and more.</h4>
-        
         
  </header>
- 
+ <div class="feature">
+   <div class="features-note">
+    <h2 class="h2">Enjoy on your TV.</h2>
+    <h4  class="h4">Watch on smart TVs,Playstation,Xbox,Chromecast, Apple TV, Blu- <br>
+         ray payers and more.</h4>
+        
+   </div>
+       
+            <img src="./images/mobile.png" alt="" class="img-feature" srcset="">
+        
+        </div>
+
+
+ <div class="feature"> 
+    
+        <img src="./images/mobile.png" alt="" class="img-feature" srcset="">
+    
+   <div class="features-note">
+    <h2 class="h2">Download your shows to watch offline.</h2>
+    <h4  class="h44">Save your favorites easily and alwayshave something to <br> watch.<br>
+         ray payers and more.</h4>
+        
+   </div>
+        
+        </div>
+ <div class="feature"> 
+    
+        <img src="./images/children.png" alt="" class="img-feature" srcset="">
+    
+   <div class="features-note">
+    <h2 class="h2" >Create profiles for children.</h2>
+    <h4 class="h4" >  Send children on adventures with their favourite <br> characters in a
+        space made just for them—free with your membership.</h4>
+        
+   </div>
+        
+        </div>
+        
    <main>
-    <br>
+    
     <h1>Frequently Asked Questions</h1>
   <br>
   <div class="container ">
@@ -158,9 +194,16 @@
                   </div>
               </div>
           </div>
-
       </div>
-
+      <br>
+      <br>
+      <p style="font-size: 21.2px;">Ready to watch? Enter your email to create or restart your membership.</p>
+    
+    <div style="display: flex;justify-content: center;flex-wrap: wrap;" >
+       <input type="email" class="jpj" id="email" value="" placeholder="Email address" required>
+       <br>
+       <button type ="submit" class="butt" onclick="next()">Sign-In>>></button>
+    </div>
    </main>
 
 </body>

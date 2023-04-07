@@ -2,18 +2,11 @@ let email = document.getElementById("email");
 let display = document.getElementById("show");
 
 const myModal = new bootstrap.Modal(document.getElementById("exampleModal"));
-// myModal.show();
-
-// String with email address
-//const str = "johndoe@example.com";
-
-//regexExp.test(str); // true
 
 function next() {
   const regexExp =
     /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/gi;
   if (regexExp.test(email.value)) {
-    // display.innerHTML = 'welcome to login page'
     window.open("show.html", "_self");
 
     localStorage.setItem("id", email.value);
@@ -23,7 +16,7 @@ function next() {
   } else {
     alert("Account Not Registered");
 
-    window.open("Error.html", "_self");
+    window.open("error.html", "_self");
   }
 }
 
