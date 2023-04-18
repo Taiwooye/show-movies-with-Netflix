@@ -1,6 +1,7 @@
 let email = document.getElementById("email");
 let display = document.getElementById("show");
 
+
 const myModal = new bootstrap.Modal(document.getElementById("exampleModal"));
 
 function next() {
@@ -22,7 +23,7 @@ function next() {
 
 let movies = [];
 
-console.log(window.location.href);
+// console.log(window.location.href);
 
 window.location.href == "http://127.0.0.1:5500/show.html" ||
   "https://show-movies-with-netflix.vercel.app/show.html";
@@ -30,8 +31,6 @@ window.location.href == "http://127.0.0.1:5500/show.html" ||
 if (window.location.href) {
   load();
 }
-
-//https://api.themoviedb.org/3/movie/76600/videos?api_key=f7e65740c28f0e6ddf5f412c8e4df4f8&language=en-US
 
 async function videDetails(id) {
   let output = [];
@@ -79,16 +78,14 @@ function watchmovie(movies) {
       let title = movies[i].original_title;
       let overview = movies[i].overview;
       let mvId = movies[i].id;
-      //let other=movies[i].original_name;
 
       content.innerHTML = `<div class="movie-box">
       <div class="pic">
         <img src="${path}${img}" class="movie-img">
       </div>
-      <h2 class="movie-title">${title.substr(0, 18)}</h2>
+      <h2 class="movie-title">${title.substr(0, 18)}...</h2>
     <div class="like_contain">  <span class="movie-price">${date} </span>
     <i class="fa-regular fa-heart like" ></i></div>
-    
     </div>`;
 
       moviecontent.append(content);
@@ -99,7 +96,6 @@ function watchmovie(movies) {
         let userid = localStorage.id;
 
         let movies = JSON.parse(localStorage.getItem(userid));
-        //console.log(movies);
 
         if (movies.includes(title)) {
           console.log(j);
@@ -108,11 +104,9 @@ function watchmovie(movies) {
           localStorage.setItem(userid, JSON.stringify(movies));
           this.classList.remove("fa-solid");
           this.classList.add("fa-regular");
-          console.log(this);
         } else {
           this.classList.remove("fa-regular");
           this.classList.add("fa-solid");
-          console.log(this);
           movies.push(title);
           localStorage.setItem(userid, JSON.stringify(movies));
         }
@@ -155,7 +149,6 @@ var stopVideo = function () {
   var video = document.querySelector("video");
   if (iframe) {
     iframe.src = "";
-    //iframe.src = iframeSrc;
   }
   if (video) {
     video.pause();
