@@ -1,6 +1,34 @@
 let email = document.getElementById("email");
 let display = document.getElementById("show");
 
+//dark mode start
+const toggleBtn =document.getElementById('toggle-btn');
+const theme = document.querySelector('body');
+let darkMode =localStorage.getItem('dark-Mode');
+
+const enableDarkMode =()=>{
+    theme.classList.add("dark-mode-theme");
+    toggleBtn.classList.remove('dark-mode-toggle');
+    localStorage.setItem('dark-mode', 'enabled')
+};
+
+const disableDarkMode =()=>{
+    theme.classList.remove('dark-mode-theme');
+    toggleBtn.classList.add('dark-mode-toggle');
+    localStorage.setItem('dark-mode', 'disabled')
+};
+
+if (darkMode ==="enabled") {
+    enableDarkMode();
+}
+toggleBtn.addEventListener('click',(e) =>{
+    darkMode=localStorage.getItem("dark-mode");
+    if (darkMode==="disabled") {
+        enableDarkMode();
+    } else {
+        disableDarkMode();
+    }
+});
 
 const myModal = new bootstrap.Modal(document.getElementById("exampleModal"));
 

@@ -1,0 +1,46 @@
+{
+  "folders": [
+	{
+		"path": "../../web js"
+	},
+	{
+		"path": "../../java_projects"
+	},
+	{
+		"path": "../NFT"
+	},
+	{
+		"path": "../feedback"
+	},
+	{
+		"path": "../phonebook search"
+	},
+	{
+		"path": "../../online cart"
+	},
+	{
+		"path": "../../FetchApi"
+	},
+	{
+		"path": "."
+	},
+	{
+		"path": "../../desktop fonts"
+	},
+	{
+		"path": "../../web_project/whatsapp"
+	},
+	{
+		"path": "../../javascript-basic-projects"
+	},
+	{
+		"path": "../../apifetch"
+	},
+	{
+		"path": "../../new_react_project"
+	}
+],
+  "settings": {
+    "liveServer.settings.multiRootWorkspaceName": "netflix"
+  }
+}
